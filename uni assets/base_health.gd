@@ -1,11 +1,9 @@
-extends ProgressBar
-#this is the progress bar for Soldier A
+extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.max_value = get_parent().health
-
+	text = "Base Health: %d" % GameManager.base_health
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	self.value = get_parent().health
+	text = "Base Health: %d" % GameManager.base_health

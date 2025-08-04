@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm7maoahogk0q"]
+[gd_scene load_steps=4 format=3 uid="uid://bm7maoahogk0q"]
 
 [ext_resource type="Script" path="res://start_game_button.gd" id="1_4drqw"]
+[ext_resource type="PackedScene" uid="uid://b7ocuod30cp7g" path="res://skill_tree_button.tscn" id="2_sf1af"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dplyo"]
 bg_color = Color(1, 0.58, 0.706, 1)
@@ -32,5 +33,12 @@ offset_right = 608.0
 offset_bottom = 543.0
 text = "Start Game"
 script = ExtResource("1_4drqw")
+
+[node name="SkillTreeButton" parent="CanvasLayer/Panel" instance=ExtResource("2_sf1af")]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
 
 [connection signal="pressed" from="CanvasLayer/Panel/StartGameButton" to="CanvasLayer/Panel/StartGameButton" method="_on_pressed"]

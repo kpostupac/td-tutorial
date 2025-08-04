@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bucfduekbpfwt" path="res://assets/tile_map.tscn" id="1_ki6ca"]
 [ext_resource type="Script" path="res://path_spawner.gd" id="2_50s1q"]
-[ext_resource type="PackedScene" uid="uid://ce38me3220wl3" path="res://ui.tscn" id="3_so3vx"]
-[ext_resource type="PackedScene" uid="uid://b7ocuod30cp7g" path="res://skill_tree_button.tscn" id="4_8p82o"]
+[ext_resource type="PackedScene" uid="uid://ce38me3220wl3" path="res://uni assets/ui.tscn" id="3_so3vx"]
+[ext_resource type="Script" path="res://uni assets/base_health.gd" id="5_yp4gf"]
 
 [node name="Main" type="Node2D"]
 
@@ -21,6 +21,9 @@ autostart = true
 
 [node name="UI" parent="." instance=ExtResource("3_so3vx")]
 
-[node name="SkillTreeButton" parent="." instance=ExtResource("4_8p82o")]
+[node name="BaseHealth" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("5_yp4gf")
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]
