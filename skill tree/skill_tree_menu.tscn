@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://dwje25187pafv"]
 
-[ext_resource type="Script" path="res://skill tree/skill_tree_menu.gd" id="1_b12kv"]
-[ext_resource type="Script" path="res://skill tree/back_button.gd" id="1_ltw2c"]
+[ext_resource type="Script" uid="uid://d35hql5focmmk" path="res://skill tree/skill_tree_menu.gd" id="1_b12kv"]
+[ext_resource type="Script" uid="uid://c4jxa5lcsmwwf" path="res://skill tree/back_button.gd" id="1_ltw2c"]
 [ext_resource type="Texture2D" uid="uid://bwpxcvhaqhnsw" path="res://assets/PNG/Default size/towerDefense_tile134.png" id="2_12687"]
-[ext_resource type="Script" path="res://skill tree/increase_tower_speed_skill.gd" id="4_e5spp"]
+[ext_resource type="Script" uid="uid://cuhqkllf65eod" path="res://skill tree/increase_tower_speed_skill.gd" id="4_e5spp"]
 [ext_resource type="Texture2D" uid="uid://churrp85sotl1" path="res://assets/PNG/Default size/towerDefense_tile205.png" id="4_ttvyn"]
-[ext_resource type="Script" path="res://skill tree/skill_points_label.gd" id="6_bbcde"]
+[ext_resource type="Script" uid="uid://bguyv0iw3alfx" path="res://skill tree/skill_points_label.gd" id="6_bbcde"]
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(1536, 832)
@@ -17,7 +17,7 @@ script = ExtResource("1_b12kv")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1536.0
+offset_right = 1792.0
 offset_bottom = 832.0
 
 [node name="BackButton" type="Button" parent="Panel"]

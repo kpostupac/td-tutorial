@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm7maoahogk0q"]
 
-[ext_resource type="Script" path="res://start_game_button.gd" id="1_4drqw"]
+[ext_resource type="Script" uid="uid://782qdkggs5k8" path="res://start_game_button.gd" id="1_4drqw"]
 [ext_resource type="PackedScene" uid="uid://b7ocuod30cp7g" path="res://skill_tree_button.tscn" id="2_sf1af"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dplyo"]

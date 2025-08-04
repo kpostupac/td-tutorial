@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dk2mb4un8gidi"]
 
-[ext_resource type="Script" path="res://enemies/soldier_a.gd" id="1_0y7mb"]
+[ext_resource type="Script" uid="uid://dvkkir7ahtne0" path="res://enemies/soldier_a.gd" id="1_0y7mb"]
 [ext_resource type="Texture2D" uid="uid://be7ecnwkoglc7" path="res://assets/PNG/Default size/towerDefense_tile245.png" id="1_tmb8y"]
-[ext_resource type="Script" path="res://enemies/progress_bar.gd" id="2_vh0rd"]
+[ext_resource type="Script" uid="uid://c7ponc464wnv4" path="res://enemies/progress_bar.gd" id="2_vh0rd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oibwk"]
 bg_color = Color(0.2, 0.2, 0.2, 1)

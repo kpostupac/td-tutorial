@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://oryniucp6ui8"]
 
 [ext_resource type="PackedScene" uid="uid://bucfduekbpfwt" path="res://assets/tile_map.tscn" id="1_ki6ca"]
-[ext_resource type="Script" path="res://path_spawner.gd" id="2_50s1q"]
+[ext_resource type="Script" uid="uid://cpxcmuyped2vt" path="res://path_spawner.gd" id="2_50s1q"]
 [ext_resource type="PackedScene" uid="uid://ce38me3220wl3" path="res://uni assets/ui.tscn" id="3_so3vx"]
-[ext_resource type="Script" path="res://player_currency.gd" id="5_gghj0"]
-[ext_resource type="Script" path="res://uni assets/base_health.gd" id="5_yp4gf"]
+[ext_resource type="Script" uid="uid://dnwcunbnqjhtd" path="res://player_currency.gd" id="5_gghj0"]
+[ext_resource type="Script" uid="uid://fjjjbrk13qlj" path="res://uni assets/base_health.gd" id="5_yp4gf"]
 
 [node name="Main" type="Node2D"]
 
