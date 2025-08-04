@@ -11,19 +11,18 @@ bg_color = Color(1, 0.58, 0.706, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-custom_minimum_size = Vector2(1536, 832)
+custom_minimum_size = Vector2(1792, 832)
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dplyo")
 
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Panel"]
-custom_minimum_size = Vector2(256, 64)
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 640.0
-offset_top = 128.0
-offset_right = 896.0
-offset_bottom = 192.0
-text = "Poeny"
+offset_left = 896.0
+offset_top = 256.0
+offset_right = 944.0
+offset_bottom = 279.0
+text = "Peony"
 
 [node name="StartGameButton" type="Button" parent="CanvasLayer/Panel"]
 layout_mode = 0

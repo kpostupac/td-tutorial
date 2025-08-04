@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://oryniucp6ui8"]
+[gd_scene load_steps=6 format=3 uid="uid://oryniucp6ui8"]
 
 [ext_resource type="PackedScene" uid="uid://bucfduekbpfwt" path="res://assets/tile_map.tscn" id="1_ki6ca"]
 [ext_resource type="Script" path="res://path_spawner.gd" id="2_50s1q"]
 [ext_resource type="PackedScene" uid="uid://ce38me3220wl3" path="res://uni assets/ui.tscn" id="3_so3vx"]
+[ext_resource type="Script" path="res://player_currency.gd" id="5_gghj0"]
 [ext_resource type="Script" path="res://uni assets/base_health.gd" id="5_yp4gf"]
 
 [node name="Main" type="Node2D"]
@@ -22,8 +23,17 @@ autostart = true
 [node name="UI" parent="." instance=ExtResource("3_so3vx")]
 
 [node name="BaseHealth" type="Label" parent="."]
-offset_right = 40.0
+offset_left = 896.0
+offset_right = 936.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 script = ExtResource("5_yp4gf")
+
+[node name="PlayerCurrency" type="Label" parent="."]
+offset_left = 1280.0
+offset_right = 1320.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+script = ExtResource("5_gghj0")
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]

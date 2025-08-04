@@ -22,7 +22,7 @@ GameManager="*res://uni assets/game_manager.gd"
 
 [display]
 
-window/size/viewport_width=1536
+window/size/viewport_width=1792
 window/size/viewport_height=832
 
 [editor]

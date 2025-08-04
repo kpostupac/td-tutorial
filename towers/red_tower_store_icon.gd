@@ -4,20 +4,29 @@ extends Panel
 
 var current_tile
 var grid_size = 64
+#this is the price of the red bullet tower
+var tower_price = 25
 
 #I had to set the custom minimium sizing here
 #if i just set the basic size property, the on_click 
 #was not detected
 func _on_gui_input(event: InputEvent) -> void:
 	var temp_tower = tower.instantiate()
+	var current_currency_amount =  GameManager.player_currency
+	
 	#detects when a user clicks
 	if event is InputEventMouseButton and event.button_mask == 1:
 		#when you add temp_tower as a child, you can no longer reference it
 		#as "temp_tower", you now need to reference it as a child.
-		add_child(temp_tower)
-		#TODO: what is this variable?
-		temp_tower.process_mode = Node.PROCESS_MODE_DISABLED
-		temp_tower.scale = Vector2(.32, .32)
+		
+		#check if you have enough money to buy this tower
+		if current_currency_amount >= tower_price:
+			add_child(temp_tower)
+			#TODO: what is this variable?
+			temp_tower.process_mode = Node.PROCESS_MODE_DISABLED
+			temp_tower.scale = Vector2(.32, .32)
+		else:
+			pass
 	
 	#mouse click & drag
 	elif event is InputEventMouseMotion and event.button_mask == 1:
@@ -45,6 +54,7 @@ func _on_gui_input(event: InputEvent) -> void:
 				floor(event.global_position.y / grid_size) * grid_size
 			)
 			temp_tower.get_node("Placement Area").hide()
+			GameManager.player_currency = current_currency_amount - tower_price
 	else:
 		if get_child_count() > 1:
 			get_child(1).queue_free()
@@ -57,4 +67,3 @@ func _input(event):
 		#if the user is trying to buy a tower
 		else:
 			self.get_child(1).queue_free()
-		

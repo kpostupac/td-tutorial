@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 	
 	#if the enemy dies
 	if health <= 0:
+		GameManager.on_enemy_died()
 		get_parent().get_parent().queue_free()

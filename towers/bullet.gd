@@ -1,3 +1,6 @@
+#this is the bullet that is shot from the 
+#red bullet tower
+
 extends CharacterBody2D
 
 var target 
@@ -5,6 +8,7 @@ var speed = 500
 var path_name = ""
 var bullet_damage
 
+#this is when a bullet is shot from the tower
 func _physics_process(delta: float) -> void:
 	var path_spawner = get_tree().get_root().get_node("Main/PathSpawner")
 	
@@ -22,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
-
+#this is when it hits a soldier
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if "Soldier A" in body.name:
 		body.health -= bullet_damage
