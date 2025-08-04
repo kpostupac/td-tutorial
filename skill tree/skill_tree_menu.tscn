@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwje25187pafv"]
+
+[ext_resource type="Script" path="res://skill tree/back_button.gd" id="1_ltw2c"]
+[ext_resource type="Texture2D" uid="uid://bwpxcvhaqhnsw" path="res://assets/PNG/Default size/towerDefense_tile134.png" id="2_12687"]
+
+[node name="SkillTreeMenu" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1536.0
+offset_bottom = 856.0
+
+[node name="BackButton" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 96.0
+script = ExtResource("1_ltw2c")
+
+[node name="TowerDefenseTile134" type="Sprite2D" parent="Panel/BackButton"]
+position = Vector2(32, 32)
+texture = ExtResource("2_12687")
+
+[connection signal="pressed" from="Panel/BackButton" to="Panel/BackButton" method="_on_pressed"]

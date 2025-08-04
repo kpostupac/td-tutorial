@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm7maoahogk0q"]
+
+[ext_resource type="Script" path="res://start_game_button.gd" id="1_4drqw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dplyo"]
+bg_color = Color(1, 0.58, 0.706, 1)
+
+[node name="StartMenu" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+custom_minimum_size = Vector2(1536, 832)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dplyo")
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Panel"]
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 0
+offset_left = 640.0
+offset_top = 128.0
+offset_right = 896.0
+offset_bottom = 192.0
+text = "Poeny"
+
+[node name="StartGameButton" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 512.0
+offset_right = 608.0
+offset_bottom = 543.0
+text = "Start Game"
+script = ExtResource("1_4drqw")
+
+[connection signal="pressed" from="CanvasLayer/Panel/StartGameButton" to="CanvasLayer/Panel/StartGameButton" method="_on_pressed"]
