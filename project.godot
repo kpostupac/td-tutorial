@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SaveManager="*res://uni assets/save_manager.gd"
 GameManager="*res://uni assets/game_manager.gd"
+StoreManager="*res://uni assets/store_manager.gd"
 
 [display]
 
