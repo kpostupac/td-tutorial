@@ -10,7 +10,10 @@ var current
 
 func _process(delta: float) -> void:
 	if is_instance_valid(current):
-		self.look_at(current.global_position)
+		# this is if you want the tower to rotate with
+		# the enemy
+		#self.look_at(current.global_position)
+		pass
 	else:
 		for i in get_node("BulletContainer").get_child_count():
 			get_node("BulletContainer").get_child(i).queue_free()

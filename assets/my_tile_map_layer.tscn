@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://lv8wgwon1igu"]
+
+[ext_resource type="Texture2D" uid="uid://ce2p87dl6vkvp" path="res://assets/td tutorial art.png" id="1_g1ev3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t188w"]
+texture = ExtResource("1_g1ev3")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+2:0/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/custom_data_0 = true
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lkd1b"]
+tile_size = Vector2i(64, 64)
+custom_data_layer_0/name = "placeable"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_t188w")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+tile_set = SubResource("TileSet_lkd1b")
+rendering_quadrant_size = 64

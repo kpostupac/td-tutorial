@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://o8715il8o3oi"]
 
-[ext_resource type="Texture2D" uid="uid://nvrcn2k184mw" path="res://assets/PNG/Default size/towerDefense_tile250.png" id="1_45fjx"]
 [ext_resource type="Script" uid="uid://b078t7pt51t2o" path="res://towers/red_bullet_tower.gd" id="1_xjkfs"]
+[ext_resource type="Texture2D" uid="uid://dx3vr8whpntgv" path="res://assets/my_art/td tutorial shroom 4.png" id="2_nvtxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8meb"]
 size = Vector2(189.333, 206.253)
@@ -27,12 +27,10 @@ scale = Vector2(0.905661, 0.620596)
 shape = SubResource("RectangleShape2D_e8meb")
 
 [node name="Aim" type="Marker2D" parent="."]
-position = Vector2(64, 0)
 
-[node name="TowerDefenseTile250" type="Sprite2D" parent="."]
-rotation = 1.5708
+[node name="RedShroom" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("1_45fjx")
+texture = ExtResource("2_nvtxl")
 
 [node name="Tower Range" type="Area2D" parent="."]
 

@@ -7,7 +7,13 @@ var grid_size = 64
 #this is the price of the red bullet tower
 var tower_price = 50
 # the TileMap in use so that you can check if the tile allows for placement or not
-@onready var tilemap = get_node("/root/Main/TileMap")
+@onready var tilemap = get_node("/root/Main/GroundLayer")
+   
+func _process(delta: float) -> void:
+	if GameManager.player_currency >= tower_price:
+		self.modulate = Color.WHITE 
+	else:
+		self.modulate = Color(0.5, 0.5, 0.5, 1.0)
 
 # I had to set the custom minimium sizing here
 # if i just set the basic size property, the on_click 
@@ -69,3 +75,6 @@ func _input(event):
 		#if the user is trying to buy a tower
 		else:
 			self.get_child(1).queue_free()
+
+
+ 
